@@ -73,7 +73,7 @@ class Spotify {
                 this.emitter.emit('ready')
             }).catch(error => {
                 console.log(error)
-                if(error.error === "invalid_grant" || error.error === "invalid_token"){
+                if(error.error === "invalid_grant" || error.error === "invalid_token" || error.error_description == "refresh_token must be supplied"){
                     console.log("[Spotify] Please login at http://localhost")
                     this.getTokenFromUser(this.client_id, this.client_secret, this.scopes, this.redirect_uri, this.debug, this.api).then(ready => {
                         this.emitter.emit('ready')
