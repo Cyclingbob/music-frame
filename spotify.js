@@ -1,4 +1,4 @@
-
+// The following code will add globally installed npm/node package's to node's internal module paths list. The globally installed package directory is environmental variable NODE_PATH. Unless you have installed your libraries globally and node does not load these by default, delete lines 2-7.
 var NODE_PATH = process.env.NODE_PATH.replaceAll('\\', '/')
 var pathArray = NODE_PATH.split(';')
 for(item in pathArray){
