@@ -56,4 +56,4 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html")
 })
 
-app.listen(81)
+app.listen(config.port)
